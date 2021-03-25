@@ -11,6 +11,14 @@ public class Recommendation {
         this.recommendation = recommendation;
     }
 
+    public String getService() {
+        return service;
+    }
+
+    public String getRecommendation() {
+        return recommendation;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

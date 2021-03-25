@@ -12,6 +12,14 @@ public class Command {
         this.command = command;
     }
 
+    public String getService() {
+        return service;
+    }
+
+    public String getCommand() {
+        return command;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
