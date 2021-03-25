@@ -75,6 +75,7 @@ dependencies {
     //flinkShadowJar "org.apache.flink:flink-connector-kafka_${scalaBinaryVersion}:${flinkVersion}"
     flinkShadowJar "org.apache.flink:flink-connector-kafka_${scalaBinaryVersion}:${flinkVersion}"
     flinkShadowJar "org.apache.flink:flink-cep_${scalaBinaryVersion}:${flinkVersion}"
+    flinkShadowJar "ru.ivi.opensource:flink-clickhouse-sink:1.3.0"
 
     compile "org.apache.logging.log4j:log4j-api:${log4jVersion}"
     compile "org.apache.logging.log4j:log4j-core:${log4jVersion}"

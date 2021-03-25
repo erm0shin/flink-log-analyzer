@@ -5,11 +5,11 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 
 import java.nio.charset.StandardCharsets;
 
-public class ProducerStringSerializationSchema implements KafkaSerializationSchema<String> {
+public class KafkaStringSerializer implements KafkaSerializationSchema<String> {
 
     private String topic;
 
-    public ProducerStringSerializationSchema(String topic) {
+    public KafkaStringSerializer(String topic) {
         super();
         this.topic = topic;
     }

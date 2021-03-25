@@ -4,12 +4,18 @@ import java.util.Objects;
 
 public class LogRecord {
 
+    private final String service;
     private final String level;
     private final String message;
 
-    public LogRecord(String level, String message) {
+    public LogRecord(String service, String level, String message) {
+        this.service = service;
         this.level = level;
         this.message = message;
+    }
+
+    public String getService() {
+        return service;
     }
 
     public String getLevel() {
@@ -25,19 +31,21 @@ public class LogRecord {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         LogRecord logRecord = (LogRecord) o;
-        return Objects.equals(level, logRecord.level) &&
+        return Objects.equals(service, logRecord.service) &&
+                Objects.equals(level, logRecord.level) &&
                 Objects.equals(message, logRecord.message);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(level, message);
+        return Objects.hash(service, level, message);
     }
 
     @Override
     public String toString() {
-        return "Event{" +
-                "level='" + level + '\'' +
+        return "LogRecord{" +
+                "service='" + service + '\'' +
+                ", level='" + level + '\'' +
                 ", message='" + message + '\'' +
                 '}';
     }
